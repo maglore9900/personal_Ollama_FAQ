@@ -20,7 +20,8 @@ When you are using RAM in any capacity, it will slow down the models response du
 
 Look up your GPU, is it supported?  [https://github.com/ollama/ollama/blob/main/docs/gpu.md](https://github.com/ollama/ollama/blob/main/docs/gpu.md)
 If yes, how much VRAM does it have?
-You will want the size of the model in GBs + 1~2 GBs
+You will want the size of the model in GBs + 1~2 GBs to be less than your total VRAM.
+Keep in mind that other things might be using your VRAM as well.
 
 ![](images/vram.jpg)
 
