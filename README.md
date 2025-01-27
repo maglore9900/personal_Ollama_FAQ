@@ -24,7 +24,7 @@ You will want the size of the model in GBs + 1~2 GBs
 
 ![](images/vram.jpg)
 
-*for example: `llama3.2:3b` is 2GB in size, this means you need 2GB of VRAM available and 1 to 2 more GBs of VRAM to handle message context, so you should have at least 4GB of VRAM to use it quickly.*
+> *for example: `llama3.2:3b` is 2GB in size, this means you need 2GB of VRAM available and 1 to 2 more GBs of VRAM to handle message context, so you should have at least 4GB of VRAM to use it quickly.*
 
 **You CAN use it with RAM, but it will be slower.**
 
