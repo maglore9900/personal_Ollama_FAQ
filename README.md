@@ -70,7 +70,7 @@ There is no magic work around for this, except you may find you get a bit better
 
 ## 5) I am using OpenWeb UI and ...
 
-Is it an Ollama question? does the issue happen when using Ollama by itself? If yes, please ask it in the [Ollama discord](https://discord.gg/q7myykKWYR) general chat and/or open a ticket in Help. (But check out the next bullet before hand)
+Is it an Ollama question? does the issue happen when using Ollama by itself? If yes, please ask it in the [Ollama discord](https://discord.gg/q7myykKWYR) general chat and/or open a ticket in Help. (But check out the #9 before hand)
 
 Otherwise, go ask in the OpenWeb UI discord. They will know how to answer OpenWeb UI questions.
 
