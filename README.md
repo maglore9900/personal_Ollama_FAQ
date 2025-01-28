@@ -12,7 +12,7 @@ This is a small bit of info to help address the most common questions I see in t
 [9) Ok, I have a question, and none of the previous resources answer it](##-9-Ok,-I-have-a-question,-and-none-of-the-previous-resources-answer-it)
 [10) What is embedding?](##-10-What-is-embedding?)
 [11) What is Retrieval Augmented Generation (RAG)](##-11-What-is-Retrieval-Augmented-Generation-(RAG))
-[12) Lastly! I am just a guy on the internet.](##-12-Lastly!-I-am-just-a-guy-on-the-internet.)
+[12) Lastly! I am just a guy on the internet.](##-12-Lastly!-I-am-just-a-guy-on-the-internet.) 
 
 ## 1) I have a question
 
