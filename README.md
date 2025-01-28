@@ -6,9 +6,25 @@ This is a small bit of info to help address the most common questions I see in t
 
 Did you read the FAQ yet? [https://github.com/ollama/ollama/blob/main/docs/faq.md](https://github.com/ollama/ollama/blob/main/docs/faq.md)
 
-## 2) Yes, and my question isn't answered by the FAQ
+### 1.1) Yes, and my question isn't answered by the FAQ
 
 Did you look at the other documentation, such as GPU, API, Docker, Linux, Windows, Troubleshooting, etc?
+
+## 2) It fails when I pull / run a model
+
+#### 2.1) Pulling a model?
+
+Try changing your DNS to 1.1.1.1 or 8.8.8.8
+
+The most common issue is caused by some kind of DNS caching.
+
+#### 2.2) Running a model?
+
+Make sure you have the most up to date version of Ollama.
+
+Make sure you installed it using the methods shown on the Ollama website.
+
+Still having an issue? Go to the Ollama discord and open a ticket in the #Help channel. See #9 below.
 
 ## 3) Can I run X model?
 
@@ -18,7 +34,7 @@ Ideally this will be VRAM on your GPU. If the model + context is more than the a
 
 When you are using RAM in any capacity, it will slow down the models response due to bottlenecks at the speed of the RAM, the CPU, and the Bus.
 
-### 3.1) How do I know what size model I can run?
+#### 3.1) How do I know what size model I can run?
 
 Look up your GPU, is it supported?  [https://github.com/ollama/ollama/blob/main/docs/gpu.md](https://github.com/ollama/ollama/blob/main/docs/gpu.md)
 
@@ -34,7 +50,7 @@ You will want the size of the model in GBs + 1~2 GBs to be less than your total 
 
 *You CAN use it with RAM, but it will be slower.*
 
-### 3.2) But wait, I have a mac, and it has Unified Memory!
+#### 3.2) But wait, I have a mac, and it has Unified Memory!
 
 Ok, so basically its the same rules, but don't get hung up on RAM vs VRAM. You still need the memory to run the model.
 
