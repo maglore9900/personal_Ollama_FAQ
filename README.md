@@ -64,7 +64,7 @@ If you are experiencing this problem, you probably have a model that doesnt fit 
 
 So why do you see all the CPU usage and nothing on GPU.
 
-The answer is simple. The GPU is waiting for the CPU to catch up. This is because the CPU, RAM, and Bus are slower. One if not all three of those will be the constraint.
+The answer is simple. The GPU is waiting for the CPU to catch up. This is because the CPU, RAM, and Bus are slower. One, if not all three, of those will be the constraint.
 
 There is no magic work around for this, except you may find you get a bit better performance if you choose an LLM that is optimzied for CPU, like the Granite3 models.
 
