@@ -12,13 +12,13 @@ Did you look at the other documentation, such as GPU, API, Docker, Linux, Window
 
 ## 2) It fails when I pull / run a model
 
-#### 2.1) Pulling a model?
+### 2.1) Pulling a model?
 
-Try changing your DNS to 1.1.1.1
+Try changing your DNS to 1.1.1.1 or 8.8.8.8
 
 The most common issue is caused by some kind of DNS caching.
 
-#### 2.2) Running a model?
+### 2.2) Running a model?
 
 Make sure you have the most up to date version of Ollama.
 
@@ -34,7 +34,7 @@ Ideally this will be VRAM on your GPU. If the model + context is more than the a
 
 When you are using RAM in any capacity, it will slow down the models response due to bottlenecks at the speed of the RAM, the CPU, and the Bus.
 
-#### 3.1) How do I know what size model I can run?
+### 3.1) How do I know what size model I can run?
 
 Look up your GPU, is it supported?  [https://github.com/ollama/ollama/blob/main/docs/gpu.md](https://github.com/ollama/ollama/blob/main/docs/gpu.md)
 
@@ -50,7 +50,7 @@ You will want the size of the model in GBs + 1~2 GBs to be less than your total 
 
 *You CAN use it with RAM, but it will be slower.*
 
-#### 3.2) But wait, I have a mac, and it has Unified Memory!
+### 3.2) But wait, I have a mac, and it has Unified Memory!
 
 Ok, so basically its the same rules, but don't get hung up on RAM vs VRAM. You still need the memory to run the model.
 
@@ -79,6 +79,8 @@ Otherwise, go ask in the OpenWeb UI discord. They will know how to answer OpenWe
 LLM parameters are numerical values that control how a Large Language Model (LLM) processes and generates text.
 
 They are learned during training and adjusted to help the model understand language.
+
+More is technically better, but in a lot of cases the extra accuracy is not really usable.
 
 ## 7) What is Quantization?
 
