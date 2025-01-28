@@ -29,6 +29,12 @@ Keep in mind that other things might be using your VRAM as well.
 
 **You CAN use it with RAM, but it will be slower.**
 
+### 3.2) But wait, I have a mac, and it has Unified Memory!
+
+Ok, so basically its the same rules, but don't get hung up on RAM vs VRAM. You still need the memory to run the model.
+
+From what I understand, Unified Memory is slower than VRAM, but faster than RAM. I dunno, I dont use Macs. 
+
 ## 4) I am using OpenWeb UI and ...
 
 Is it an Ollama question? does the issue happen when using Ollama by itself? If yes, please ask it in the [Ollama discord](https://discord.gg/q7myykKWYR) general chat and/or open a ticket in Help. (But check out the next bullet before hand)
