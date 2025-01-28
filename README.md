@@ -14,7 +14,7 @@ Did you look at the other documentation, such as GPU, API, Docker, Linux, Window
 
 #### 2.1) Pulling a model?
 
-Try changing your DNS to 1.1.1.1 or 8.8.8.8
+Try changing your DNS to 1.1.1.1
 
 The most common issue is caused by some kind of DNS caching.
 
