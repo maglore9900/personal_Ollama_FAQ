@@ -40,7 +40,6 @@ Ok, so basically its the same rules, but don't get hung up on RAM vs VRAM. You s
 
 From what I understand, Unified Memory is slower than VRAM, but faster than RAM. I dunno, I dont use Macs.
 
-
 ## 4) I am running Ollama but its not using all my resources OR I have a GPU and its not being used but my CPU is at 100%
 
 So, if you read #3 you know that you really want Ollama to use your GPU and to do that the model needs to fit into the available VRAM.
@@ -53,20 +52,17 @@ The answer is simple. The GPU is waiting for the CPU to catch up. This is becaus
 
 There is no magic work around for this, except you may find you get a bit better performance if you choose an LLM that is optimzied for CPU, like the Granite3 models.
 
-
 ## 5) I am using OpenWeb UI and ...
 
 Is it an Ollama question? does the issue happen when using Ollama by itself? If yes, please ask it in the [Ollama discord](https://discord.gg/q7myykKWYR) general chat and/or open a ticket in Help. (But check out the next bullet before hand)
 
 Otherwise, go ask in the OpenWeb UI discord. They will know how to answer OpenWeb UI questions.
 
-
 ## 6) What are Parameters?
 
 LLM parameters are numerical values that control how a Large Language Model (LLM) processes and generates text.
 
 They are learned during training and adjusted to help the model understand language.
-
 
 ## 7) What is Quantization?
 
@@ -80,7 +76,6 @@ This also makes them less accurate. Generally Q4 and up are fine. Anything small
 
 file: [quantization_type.xlsx](quantization_type.xlsx)
 
-
 ## 8) What is Abliteration
 
 Modern LLMs are fine-tuned for safety and instruction-following, meaning they are trained to refuse harmful requests.
@@ -92,7 +87,6 @@ If we prevent the model from representing this direction, it  **loses its abilit
 Conversely, adding this direction artificially can cause the model to refuse even harmless requests.
 
 source: [https://huggingface.co/blog/mlabonne/abliteration](https://huggingface.co/blog/mlabonne/abliteration)
-
 
 ## 9) Ok, I have a question, and none of the previous resources answer it
 
@@ -107,8 +101,40 @@ If you are not sure, maybe take a look at how stackoverflow suggests you should 
 
 [https://stackoverflow.com/help/how-to-ask](https://stackoverflow.com/help/how-to-ask)
 
+## 10) What is embedding?
 
-# 10) Lastly! I am just a guy on the internet.
+In the context of Large Language Models (LLMs), an "embedding" is a numerical representation of a word, phrase, or piece of text that captures its semantic meaning , allowing the LLM to understand the context and relationships between different pieces of information by placing them as vectors in a high-dimensional space where similar concepts are positioned close together; essentially, it's a way to translate language into a format that computers can easily process and reason with
+
+check out this article: [https://medium.com/mongodb/how-to-choose-the-best-embedding-model-for-your-llm-application-2f65fcdfa58d](https://medium.com/mongodb/how-to-choose-the-best-embedding-model-for-your-llm-application-2f65fcdfa58d)
+
+
+## 11) What is Retrieval Augmented Generation (RAG)
+
+Retrieval Augmented Generation (RAG) is  an AI technique that enhances the capabilities of a large language model (LLM) by allowing it to access and reference external information sources, like a knowledge base or database, before generating a response, essentially providing more context and accuracy to the generated output by retrieving relevant data specific to a given query or situation.
+
+The simpliest form of RAG is taking the content of a document and simply shoving it into the context windows of an LLM. The fact that LLMs can have pretty large context windows these days means this is somewhat feasible. However, its not a great solution.
+
+First, you are giving it a lot of data, and to fit that you need a large context window, so thats going to eat a lot of your hardwares available memory. This can cause the LLMs to slow down (see #3), or you may have more data than what can fit in the context window.
+
+Second, its going to take longer because there is alot of data thats not relevant to your query.
+
+Third, many LLMs will find the first close enough match and respond. What if the comprehensive answer can only be provided when all of the information has been reviewed.
+
+### 11.1) So what do we do then?
+
+Check out the document links below, but the TLDR; is that you will use an LLM like a retriever to find the most relevant / top k results, and provide those to the LLM to answer. (Honestly at a minimum I would suggest this). Then you are more likely to get a comprehensive answer, and its much quicker, and a more efficient use of your resources.
+
+As you dig into the links below you will see that it can get pretty advanced, and you may find that some solutions are not necessary for your use case. Thats fine, better to know what you can do and not need it, than the alternative.
+
+### 11.2) Check out these resources!
+
+- Intro to **RAG**: [https://blog.gopenai.com/**rag**-in-action-enhancing-ai-with-real-time-data-retrieval-9fc216710013](https://blog.gopenai.com/rag-in-action-enhancing-ai-with-real-time-data-retrieval-9fc216710013"https://blog.gopenai.com/rag-in-action-enhancing-ai-with-real-time-data-retrieval-9fc216710013")
+- Bit more advanced, i wrote this one: [https://medium.com/@sergio1101102/mastering-retrieval-augmented-generation-**rag**-a-practical-guide-for-new-developers-624be24ca516](https://medium.com/@sergio1101102/mastering-retrieval-augmented-generation-rag-a-practical-guide-for-new-developers-624be24ca516 "https://medium.com/@sergio1101102/mastering-retrieval-augmented-generation-rag-a-practical-guide-for-new-developers-624be24ca516")
+- A simple **RAG** tool that uses ollama, you can copy the code for what you need: [https://github.com/maglore9900/chat_with_docs](https://github.com/maglore9900/chat_with_docs "https://github.com/maglore9900/chat_with_docs")
+- Bit even more advanced, where I wrote about my own experience with a specific use case: [https://medium.com/@sergio1101102/mastering-**rag**-a-practical-guide-for-new-developers-part-2-786858742e91](https://medium.com/@sergio1101102/mastering-rag-a-practical-guide-for-new-developers-part-2-786858742e91 "https://medium.com/@sergio1101102/mastering-rag-a-practical-guide-for-new-developers-part-2-786858742e91")
+
+
+## 12) Lastly! I am just a guy on the internet.
 
 I am not on the Ollama team, I am not a representative of an org. I'm just a guy that likes the community, likes the product, and tries to help people. So if you are offended by anything above, well, I'm sorry for you.
 
