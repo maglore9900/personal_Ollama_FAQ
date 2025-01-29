@@ -1,6 +1,25 @@
 # Whispers_Ollama_FAQ
 
 This is a small bit of info to help address the most common questions I see in the Ollama discord.
+- [[#1) I have a question|1) I have a question]]
+	- [[#1) I have a question#1.1) Yes, and my question isn't answered by the FAQ|1.1) Yes, and my question isn't answered by the FAQ]]
+- [[#2) It fails when I pull / run a model|2) It fails when I pull / run a model]]
+	- [[#2) It fails when I pull / run a model#2.1) Pulling a model?|2.1) Pulling a model?]]
+	- [[#2) It fails when I pull / run a model#2.2) Running a model?|2.2) Running a model?]]
+- [[#3) Can I run X model?|3) Can I run X model?]]
+	- [[#3) Can I run X model?#3.1) How do I know what size model I can run?|3.1) How do I know what size model I can run?]]
+	- [[#3) Can I run X model?#3.2) But wait, I have a mac, and it has Unified Memory!|3.2) But wait, I have a mac, and it has Unified Memory!]]
+- [[#4) I am running Ollama but its not using all my resources OR I have a GPU and its not being used but my CPU is at 100%|4) I am running Ollama but its not using all my resources OR I have a GPU and its not being used but my CPU is at 100%]]
+- [[#5) I am using OpenWeb UI and ...|5) I am using OpenWeb UI and ...]]
+- [[#6) What are Parameters?|6) What are Parameters?]]
+- [[#7) What is Quantization?|7) What is Quantization?]]
+- [[#8) What is Abliteration|8) What is Abliteration]]
+- [[#9) Ok, I have a question, and none of the previous resources answer it|9) Ok, I have a question, and none of the previous resources answer it]]
+- [[#10) What is embedding?|10) What is embedding?]]
+- [[#11) What is Retrieval Augmented Generation (RAG)|11) What is Retrieval Augmented Generation (RAG)]]
+	- [[#11) What is Retrieval Augmented Generation (RAG)#11.1) So what do we do then?|11.1) So what do we do then?]]
+	- [[#11) What is Retrieval Augmented Generation (RAG)#11.2) Check out these resources!|11.2) Check out these resources!]]
+- [[#12) Lastly! I am just a guy on the internet.|12) Lastly! I am just a guy on the internet.]]
 
 
 ## 1) I have a question
