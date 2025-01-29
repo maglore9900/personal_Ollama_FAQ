@@ -1,5 +1,5 @@
 # Whispers_Ollama_FAQ
-
+ 
 This is a small bit of info to help address the most common questions I see in the Ollama discord.
 
 [1) I have a question](#-1-i-have-a-question)
