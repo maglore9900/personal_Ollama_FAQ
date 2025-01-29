@@ -1,30 +1,6 @@
 # Whispers_Ollama_FAQ
- 
+
 This is a small bit of info to help address the most common questions I see in the Ollama discord.
-
-[1) I have a question](#-1-i-have-a-question)
-
-[2) It fails when I pull / run a model](#-2-it-fails-when-i-pull--run-a-model)
-
-[3) Can I run X model?](##-3-can-i-run-x-model?)
-
-[4) I am running Ollama but its not using all my resources OR I have a GPU and its not being used but my CPU is at 100%](##-4-i-am-running-ollama-but-its-not-using-all-my-resources-/-i-have-a-gpu-and-its-not-being-used-but-my-cpu-is-at-100%)
-
-[5) I am using OpenWeb UI and ...](##-5-i-am-using-openweb-ui-and-...)
-
-[6) What are Parameters?](##-6-what-are-parameters?)
-
-[7) What is Quantization?](##-7-what-is-quantization?)
-
-[8) What is Abliteration?](##-8-what-is-abliteration?)
-
-[9) Ok, I have a question, and none of the previous resources answer it](##-9-ok,-i-have-a-question,-and-none-of-the-previous-resources-answer-it)
-
-[10) What is embedding?](##-10-what-is-embedding?)
-
-[11) What is Retrieval Augmented Generation (RAG)](##-11-what-is-retrieval-augmented-generation-(rag))
-
-[12) Lastly! I am just a guy on the internet.](##-12-lastly!-i-am-just-a-guy-on-the-internet.)
 
 
 ## 1) I have a question
@@ -150,7 +126,6 @@ In the context of Large Language Models (LLMs), an "embedding" is a numerical re
 
 check out this article: [https://medium.com/mongodb/how-to-choose-the-best-embedding-model-for-your-llm-application-2f65fcdfa58d](https://medium.com/mongodb/how-to-choose-the-best-embedding-model-for-your-llm-application-2f65fcdfa58d)
 
-
 ## 11) What is Retrieval Augmented Generation (RAG)
 
 Retrieval Augmented Generation (RAG) is  an AI technique that enhances the capabilities of a large language model (LLM) by allowing it to access and reference external information sources, like a knowledge base or database, before generating a response, essentially providing more context and accuracy to the generated output by retrieving relevant data specific to a given query or situation.
@@ -175,7 +150,6 @@ As you dig into the links below you will see that it can get pretty advanced, an
 - Bit more advanced, i wrote this one: [https://medium.com/@sergio1101102/mastering-retrieval-augmented-generation-**rag**-a-practical-guide-for-new-developers-624be24ca516](https://medium.com/@sergio1101102/mastering-retrieval-augmented-generation-rag-a-practical-guide-for-new-developers-624be24ca516 "https://medium.com/@sergio1101102/mastering-retrieval-augmented-generation-rag-a-practical-guide-for-new-developers-624be24ca516")
 - A simple **RAG** tool that uses ollama, you can copy the code for what you need: [https://github.com/maglore9900/chat_with_docs](https://github.com/maglore9900/chat_with_docs "https://github.com/maglore9900/chat_with_docs")
 - Bit even more advanced, where I wrote about my own experience with a specific use case: [https://medium.com/@sergio1101102/mastering-**rag**-a-practical-guide-for-new-developers-part-2-786858742e91](https://medium.com/@sergio1101102/mastering-rag-a-practical-guide-for-new-developers-part-2-786858742e91 "https://medium.com/@sergio1101102/mastering-rag-a-practical-guide-for-new-developers-part-2-786858742e91")
-
 
 ## 12) Lastly! I am just a guy on the internet.
 
