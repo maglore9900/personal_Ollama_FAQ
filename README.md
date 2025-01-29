@@ -9,7 +9,6 @@ This is a small bit of info to help address the most common questions I see in t
     + [2.2) Running a model?](#22-running-a-model-)
   * [3) Can I run X model?](#3-can-i-run-x-model-)
     + [3.1) How do I know what size model I can run?](#31-how-do-i-know-what-size-model-i-can-run-)
-    + [*for example: `llama3.2:3b` is 2GB in size, this means you need 2GB of VRAM available and 1 to 2 more GBs of VRAM to handle message context, so you should have at least 4GB of VRAM to use it quickly.*](#-for-example--llama32-3b-is-2gb-in-size-this-means-you-need-2gb-of-vram-available-and-1-to-2-more-gbs-of-vram-to-handle-message-context-so-you-should-have-at-least-4gb-of-vram-to-use-it-quickly-)
     + [3.2) But wait, I have a mac, and it has Unified Memory!](#32-but-wait-i-have-a-mac-and-it-has-unified-memory-)
   * [4) I am running Ollama but its not using all my resources OR I have a GPU and its not being used but my CPU is at 100%](#4-i-am-running-ollama-but-its-not-using-all-my-resources-or-i-have-a-gpu-and-its-not-being-used-but-my-cpu-is-at-100-)
   * [5) I am using OpenWeb UI and ...](#5-i-am-using-openweb-ui-and-)
