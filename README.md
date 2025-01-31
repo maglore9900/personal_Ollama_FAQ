@@ -2,25 +2,32 @@
 
 This is a small bit of info to help address the most common questions I see in the Ollama discord.
 
+Ollama Questions
 * [1) I have a question](#1-i-have-a-question)
-  + [1.1) Yes, and my question isn't answered by the FAQ](#11-yes-and-my-question-isn-t-answered-by-the-faq)
 * [2) It fails when I pull / run a model](#2-it-fails-when-i-pull--run-a-model)
   + [2.1) Pulling a model?](#21-pulling-a-model)
   + [2.2) Running a model?](#22-running-a-model)
 * [3) Can I run X model?](#3-can-i-run-x-model)
   + [3.1) How do I know what size model I can run?](#31-how-do-i-know-what-size-model-i-can-run)
-  + [3.2) But wait, I have a mac, and it has Unified Memory!](#32-but-wait-i-have-a-mac-and-it-has-unified-memory)
-* [4) I am running Ollama but its not using all my resources OR I have a GPU and its not being used but my CPU is at 100%](#4-i-am-running-ollama-but-its-not-using-all-my-resources-or-i-have-a-gpu-and-its-not-being-used-but-my-cpu-is-at-100)
+  + [3.2) I don't have a GPU...](#32-i-dont-have-a-gpu)
+  + [3.3) I have more than one GPU...](#33-i-have-more-than-one-gpu)
+  + [3.4) But wait, I have a mac, and it has Unified Memory!](#34-but-wait-i-have-a-mac-and-it-has-unified-memory)
+* [4) Ollama is not using all my resources OR GPU is not being used but my CPU is at 100%](#4-ollama-is-not-using-all-my-resources-or-gpu-is-not-being-used-but-my-cpu-is-at-100)
 * [5) I am using OpenWeb UI and ...](#5-i-am-using-openweb-ui-and)
-* [6) What are Parameters?](#6-what-are-parameters)
-* [7) What is Quantization?](#7-what-is-quantization)
-* [8) What is Abliteration?](#8-what-is-abliteration)
-* [9) Ok, I have a question, and none of the previous resources answer it](#9-ok-i-have-a-question-and-none-of-the-previous-resources-answer-it)
-* [10) What is embedding?](#10-what-is-embedding)
-* [11) What is Retrieval Augmented Generation (RAG)](#11-what-is-retrieval-augmented-generation-rag)
-  + [11.1) So what do we do then?](#111-so-what-do-we-do-then)
-  + [11.2) Check out these resources!](#112-check-out-these-resources)
-* [12) Lastly! I am just a guy on the internet.](#12-lastly-i-am-just-a-guy-on-the-internet)
+* [6) Ok, I have a question, and none of the previous resources answer it](#9-ok-i-have-a-question-and-none-of-the-previous-resources-answer-it)
+
+Further Reading
+*  [1) What are Parameters?](#6-what-are-parameters)
+* [2) What is Quantization?](#7-what-is-quantization)
+- [3) What is Abliteration?](#8-what-is-abliteration)
+* [4) What is Embedding?](#10-what-is-embedding)
+* [5) What is Retrieval Augmented Generation (RAG)](#11-what-is-retrieval-augmented-generation-rag)
+  + [5.1) So what do we do then?](#111-so-what-do-we-do-then)
+  + [5.2) Check out these resources!](#112-check-out-these-resources)
+* [6) Lastly! I am just a guy on the internet.](#12-lastly-i-am-just-a-guy-on-the-internet)
+
+
+# Ollama Questions
 
 ## 1) I have a question
 
@@ -70,13 +77,22 @@ You will want the size of the model in GBs + 1~2 GBs to be less than your total 
 
 *You CAN use it with RAM, but it will be slower.*
 
-### 3.2) But wait, I have a mac, and it has Unified Memory!
+### 3.2) I don't have a GPU...
+That's fine, Ollama automatically will use your RAM. Just in case you missed it all the times its written here, RAM IS SLOW. 
+
+# 3.3) I have more than one GPU...
+Ollama will use more than one GPU, BUT:
+- They need to be supported
+- They need to be the same manufacturer (both Nvidia or Both AMD, etc)
+*Caveat: You can run multiple instances of Ollama, one on an Nvidia card and one on an AMD for example*
+
+## 3.3) But wait, I have a mac, and it has Unified Memory!
 
 Ok, so basically its the same rules, but don't get hung up on RAM vs VRAM. You still need the memory to run the model.
 
 From what I understand, Unified Memory is slower than VRAM, but faster than RAM. I dunno, I dont use Macs.
 
-## 4) I am running Ollama but its not using all my resources OR I have a GPU and its not being used but my CPU is at 100%
+## 4) Ollama is not using all my resources OR GPU is not being used but my CPU is at 100%
 
 So, if you read #3 you know that you really want Ollama to use your GPU and to do that the model needs to fit into the available VRAM.
 
@@ -93,6 +109,24 @@ There is no magic work around for this, except you may find you get a bit better
 Is it an Ollama question? does the issue happen when using Ollama by itself? If yes, please ask it in the [Ollama discord](https://discord.gg/q7myykKWYR) general chat and/or open a ticket in Help. (But check out the #9 before hand)
 
 Otherwise, go ask in the OpenWeb UI discord. They will know how to answer OpenWeb UI questions.
+
+## 6) Ok, I have a question, and none of the previous resources answer it
+
+Great, ok, you are more than welcome to ask it in the Ollama discord general chat or open a ticket in the Help channel. But first, ask yourself a few questions:
+
+1) When I ask the question, am I giving them all the information they need to answer it?
+2) How complicated is my question, how much of it depends on my own computer/system?
+3) Am I asking someone for help after I have done my own research?
+4) When I post my question, do I realize that I might not get an answer right away?
+
+If you are not sure, maybe take a look at how stackoverflow suggests you should ask.
+
+[https://stackoverflow.com/help/how-to-ask](https://stackoverflow.com/help/how-to-ask)
+
+
+
+# Further Reading
+
 
 ## 6) What are Parameters?
 
@@ -124,22 +158,7 @@ If we prevent the model from representing this direction, it  **loses its abilit
 
 Conversely, adding this direction artificially can cause the model to refuse even harmless requests.
 
-source: [https://huggingface.co/blog/mlabonne/abliteration](https://huggingface.co/blog/mlabonne/abliteration)
-
-## 9) Ok, I have a question, and none of the previous resources answer it
-
-Great, ok, you are more than welcome to ask it in the Ollama discord general chat or open a ticket in the Help channel. But first, ask yourself a few questions:
-
-1) When I ask the question, am I giving them all the information they need to answer it?
-2) How complicated is my question, how much of it depends on my own computer/system?
-3) Am I asking someone for help after I have done my own research?
-4) When I post my question, do I realize that I might not get an answer right away?
-
-If you are not sure, maybe take a look at how stackoverflow suggests you should ask.
-
-[https://stackoverflow.com/help/how-to-ask](https://stackoverflow.com/help/how-to-ask)
-
-## 10) What is embedding?
+## 10) What is Embedding?
 
 In the context of Large Language Models (LLMs), an "embedding" is a numerical representation of a word, phrase, or piece of text that captures its semantic meaning , allowing the LLM to understand the context and relationships between different pieces of information by placing them as vectors in a high-dimensional space where similar concepts are positioned close together; essentially, it's a way to translate language into a format that computers can easily process and reason with
 
@@ -149,11 +168,11 @@ check out this article: [https://medium.com/mongodb/how-to-choose-the-best-embed
 
 Retrieval Augmented Generation (RAG) is  an AI technique that enhances the capabilities of a large language model (LLM) by allowing it to access and reference external information sources, like a knowledge base or database, before generating a response, essentially providing more context and accuracy to the generated output by retrieving relevant data specific to a given query or situation.
 
-The simpliest form of RAG is taking the content of a document and simply shoving it into the context windows of an LLM. The fact that LLMs can have pretty large context windows these days means this is somewhat feasible. However, its not a great solution.
+The simplest form of RAG is taking the content of a document and simply shoving it into the context windows of an LLM. The fact that LLMs can have pretty large context windows these days means this is somewhat feasible. However, its not a great solution.
 
-First, you are giving it a lot of data, and to fit that you need a large context window, so thats going to eat a lot of your hardwares available memory. This can cause the LLMs to slow down (see #3), or you may have more data than what can fit in the context window.
+First, you are giving it a lot of data, and to fit that you need a large context window, so that's going to eat a lot of your hardware's available memory. This can cause the LLMs to slow down (see #3), or you may have more data than what can fit in the context window.
 
-Second, its going to take longer because there is alot of data thats not relevant to your query.
+Second, its going to take longer because there is a lot of data that's not relevant to your query.
 
 Third, many LLMs will find the first close enough match and respond. What if the comprehensive answer can only be provided when all of the information has been reviewed.
 
@@ -169,6 +188,8 @@ As you dig into the links below you will see that it can get pretty advanced, an
 - Bit more advanced, i wrote this one: [https://medium.com/@sergio1101102/mastering-retrieval-augmented-generation-**rag**-a-practical-guide-for-new-developers-624be24ca516](https://medium.com/@sergio1101102/mastering-retrieval-augmented-generation-rag-a-practical-guide-for-new-developers-624be24ca516 "https://medium.com/@sergio1101102/mastering-retrieval-augmented-generation-rag-a-practical-guide-for-new-developers-624be24ca516")
 - A simple **RAG** tool that uses ollama, you can copy the code for what you need: [https://github.com/maglore9900/chat_with_docs](https://github.com/maglore9900/chat_with_docs "https://github.com/maglore9900/chat_with_docs")
 - Bit even more advanced, where I wrote about my own experience with a specific use case: [https://medium.com/@sergio1101102/mastering-**rag**-a-practical-guide-for-new-developers-part-2-786858742e91](https://medium.com/@sergio1101102/mastering-rag-a-practical-guide-for-new-developers-part-2-786858742e91 "https://medium.com/@sergio1101102/mastering-rag-a-practical-guide-for-new-developers-part-2-786858742e91")
+
+source: [https://huggingface.co/blog/mlabonne/abliteration](https://huggingface.co/blog/mlabonne/abliteration)
 
 ## 12) Lastly! I am just a guy on the internet.
 
