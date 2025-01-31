@@ -19,7 +19,7 @@ Ollama Questions
 Further Reading
 *  [1) What are Parameters?](#6-what-are-parameters)
 * [2) What is Quantization?](#7-what-is-quantization)
-- [3) What is Abliteration?](#8-what-is-abliteration)
+* [3) What is Abliteration?](#8-what-is-abliteration)
 * [4) What is Embedding?](#10-what-is-embedding)
 * [5) What is Retrieval Augmented Generation (RAG)](#11-what-is-retrieval-augmented-generation-rag)
   + [5.1) So what do we do then?](#111-so-what-do-we-do-then)
