@@ -24,7 +24,7 @@ Further Reading
 * [5) What is Retrieval Augmented Generation (RAG)](#5-what-is-retrieval-augmented-generation-rag)
   + [5.1) So what do we do then?](#51-so-what-do-we-do-then)
   + [5.2) Check out these resources!](#52-check-out-these-resources)
-* [6) What is Fine-tuning?(#6-what-is-Fine-tuning)
+* [6) What is Fine-tuning?(#6-what-is-fine-tuning)
 * [7) Lastly! I am just a guy on the internet.](#12-lastly-i-am-just-a-guy-on-the-internet)
 
 
