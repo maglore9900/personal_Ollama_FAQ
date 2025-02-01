@@ -22,9 +22,9 @@ Further Reading
 * [3) What is Abliteration?](#8-what-is-abliteration)
 * [4) What is Embedding?](#10-what-is-embedding)
 * [5) What is Retrieval Augmented Generation (RAG)](#5-what-is-retrieval-augmented-generation-rag)
-  + [5.1) So what do we do then?](#111-so-what-do-we-do-then)
-  + [5.2) Check out these resources!](#112-check-out-these-resources)
-* [6) What is Fine-tuning?(#-what-is-Fine-tuning)
+  + [5.1) So what do we do then?](#51-so-what-do-we-do-then)
+  + [5.2) Check out these resources!](#52-check-out-these-resources)
+* [6) What is Fine-tuning?(#6-what-is-Fine-tuning)
 * [7) Lastly! I am just a guy on the internet.](#12-lastly-i-am-just-a-guy-on-the-internet)
 
 
@@ -200,7 +200,7 @@ Now, if your data is quite large, fine-tuning would be a good way only if the da
 
 Even after reading this, if you'd like to train/fine-tune checkout Unsloth AI and if you changed your mind and want to know more about retrieval augmented generation checkout this blog: https://js.langchain.com/docs/concepts/rag
 
-source: ItzCrazyKns:671B_Q4_k_m
+source: [https://github.com/ItzCrazyKns](https://github.com/ItzCrazyKns)
 
 ## 7) Lastly! I am just a guy on the internet.
 
