@@ -21,10 +21,11 @@ Further Reading
 * [2) What is Quantization?](#7-what-is-quantization)
 * [3) What is Abliteration?](#8-what-is-abliteration)
 * [4) What is Embedding?](#10-what-is-embedding)
-* [5) What is Retrieval Augmented Generation (RAG)](#11-what-is-retrieval-augmented-generation-rag)
+* [5) What is Retrieval Augmented Generation (RAG)](#5-what-is-retrieval-augmented-generation-rag)
   + [5.1) So what do we do then?](#111-so-what-do-we-do-then)
   + [5.2) Check out these resources!](#112-check-out-these-resources)
-* [6) Lastly! I am just a guy on the internet.](#12-lastly-i-am-just-a-guy-on-the-internet)
+* [6) What is Fine-tuning?(#-what-is-Fine-tuning)
+* [7) Lastly! I am just a guy on the internet.](#12-lastly-i-am-just-a-guy-on-the-internet)
 
 
 # Ollama Questions
@@ -128,7 +129,7 @@ If you are not sure, maybe take a look at how stackoverflow suggests you should 
 # Further Reading
 
 
-## 6) What are Parameters?
+## 1) What are Parameters?
 
 LLM parameters are numerical values that control how a Large Language Model (LLM) processes and generates text.
 
@@ -136,7 +137,7 @@ They are learned during training and adjusted to help the model understand langu
 
 More is technically better, but in a lot of cases the extra accuracy is not really usable.
 
-## 7) What is Quantization?
+## 2) What is Quantization?
 
 LLM quantization is a technique that reduces the precision of weights and activations in large language models (LLMs).
 
@@ -148,7 +149,7 @@ This also makes them less accurate. Generally Q4 and up are fine. Anything small
 
 file: [quantization_type.xlsx](quantization_type.xlsx)
 
-## 8) What is Abliteration?
+## 3) What is Abliteration?
 
 Modern LLMs are fine-tuned for safety and instruction-following, meaning they are trained to refuse harmful requests.
 
@@ -158,13 +159,13 @@ If we prevent the model from representing this direction, it  **loses its abilit
 
 Conversely, adding this direction artificially can cause the model to refuse even harmless requests.
 
-## 10) What is Embedding?
+## 4) What is Embedding?
 
 In the context of Large Language Models (LLMs), an "embedding" is a numerical representation of a word, phrase, or piece of text that captures its semantic meaning , allowing the LLM to understand the context and relationships between different pieces of information by placing them as vectors in a high-dimensional space where similar concepts are positioned close together; essentially, it's a way to translate language into a format that computers can easily process and reason with
 
 check out this article: [https://medium.com/mongodb/how-to-choose-the-best-embedding-model-for-your-llm-application-2f65fcdfa58d](https://medium.com/mongodb/how-to-choose-the-best-embedding-model-for-your-llm-application-2f65fcdfa58d)
 
-## 11) What is Retrieval Augmented Generation (RAG)
+## 5) What is Retrieval Augmented Generation (RAG)
 
 Retrieval Augmented Generation (RAG) is  an AI technique that enhances the capabilities of a large language model (LLM) by allowing it to access and reference external information sources, like a knowledge base or database, before generating a response, essentially providing more context and accuracy to the generated output by retrieving relevant data specific to a given query or situation.
 
@@ -176,13 +177,13 @@ Second, its going to take longer because there is a lot of data that's not relev
 
 Third, many LLMs will find the first close enough match and respond. What if the comprehensive answer can only be provided when all of the information has been reviewed.
 
-### 11.1) So what do we do then?
+### 5.1) So what do we do then?
 
 Check out the document links below, but the TLDR; is that you will use an LLM like a retriever to find the most relevant / top k results, and provide those to the LLM to answer. (Honestly at a minimum I would suggest this). Then you are more likely to get a comprehensive answer, and its much quicker, and a more efficient use of your resources.
 
 As you dig into the links below you will see that it can get pretty advanced, and you may find that some solutions are not necessary for your use case. Thats fine, better to know what you can do and not need it, than the alternative.
 
-### 11.2) Check out these resources!
+### 5.2) Check out these resources!
 
 - Intro to **RAG**: [https://blog.gopenai.com/**rag**-in-action-enhancing-ai-with-real-time-data-retrieval-9fc216710013](https://blog.gopenai.com/rag-in-action-enhancing-ai-with-real-time-data-retrieval-9fc216710013)
 - Bit more advanced, i wrote this one: [https://medium.com/@sergio1101102/mastering-retrieval-augmented-generation-**rag**-a-practical-guide-for-new-developers-624be24ca516](https://medium.com/@sergio1101102/mastering-retrieval-augmented-generation-rag-a-practical-guide-for-new-developers-624be24ca516 "https://medium.com/@sergio1101102/mastering-retrieval-augmented-generation-rag-a-practical-guide-for-new-developers-624be24ca516")
@@ -191,7 +192,17 @@ As you dig into the links below you will see that it can get pretty advanced, an
 
 source: [https://huggingface.co/blog/mlabonne/abliteration](https://huggingface.co/blog/mlabonne/abliteration)
 
-## 12) Lastly! I am just a guy on the internet.
+## 6) What is Fine-tuning?
+
+Before training an LLM/fine-tuning it on any data, question yourself is there a need for training it?
+
+Now, if your data is quite large, fine-tuning would be a good way only if the data is arranged in Q/A (question-answer) format. If the data is unorganized don't waste your time/money organizing it. If your data increases gradually/isn't fixed, fine-tuning/training isn't a thing for you. If your data is unorganized and isn't fixed, you should go for retrieval augmented generation instead. In it, we find the most similar chunks of text (from the data) that is relevent to the question and pass the data to the LLM and ask it to generate an answer on the basis of that.
+
+Even after reading this, if you'd like to train/fine-tune checkout Unsloth AI and if you changed your mind and want to know more about retrieval augmented generation checkout this blog: https://js.langchain.com/docs/concepts/rag
+
+source: ItzCrazyKns:671B_Q4_k_m
+
+## 7) Lastly! I am just a guy on the internet.
 
 I am not on the Ollama team, I am not a representative of an org. I'm just a guy that likes the community, likes the product, and tries to help people. So if you are offended by anything above, well, I'm sorry for you.
 
