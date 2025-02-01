@@ -200,6 +200,8 @@ Now, if your data is quite large, fine-tuning would be a good way only if the da
 
 Even after reading this, if you'd like to train/fine-tune checkout Unsloth AI and if you changed your mind and want to know more about retrieval augmented generation checkout this blog: https://js.langchain.com/docs/concepts/rag
 
+(Or just checkout #5 above XD )
+
 source: [https://github.com/ItzCrazyKns](https://github.com/ItzCrazyKns)
 
 ## 7) Lastly! I am just a guy on the internet.
