@@ -25,6 +25,8 @@ Further Reading
   + [5.1) So what do we do then?](#51-so-what-do-we-do-then)
   + [5.2) Check out these resources!](#52-check-out-these-resources)
 * [6) What is Fine-tuning?](#6-what-is-fine-tuning)
+  + [6.1) What is Fine-tuning good for?](#61-what-is-fine-tuning-good-for)
+  + [6.2) Fine-tuning considerations](#62-fine-tuning-considerations)
 * [7) Lastly! I am just a guy on the internet.](#12-lastly-i-am-just-a-guy-on-the-internet)
 
 
@@ -194,15 +196,47 @@ As you dig into the links below you will see that it can get pretty advanced, an
 
 ## 6) What is Fine-tuning?
 
-Before training an LLM/fine-tuning it on any data, question yourself is there a need for training it?
+Fine-tuning in machine learning is the process of adapting a pre-trained model for specific tasks or use cases. It has become a fundamental deep learning technique, particularly in the training process of foundation models used for generative AI.
 
-Now, if your data is quite large, fine-tuning would be a good way only if the data is arranged in Q/A (question-answer) format. If the data is unorganized don't waste your time/money organizing it. If your data increases gradually/isn't fixed, fine-tuning/training isn't a thing for you. If your data is unorganized and isn't fixed, you should go for retrieval augmented generation instead. In it, we find the most similar chunks of text (from the data) that is relevent to the question and pass the data to the LLM and ask it to generate an answer on the basis of that.
+Fine-tuning could be considered a subset of the broader technique of transfer learning: the practice of leveraging knowledge an existing model has already learned as the starting point for learning new tasks.
 
-Even after reading this, if you'd like to train/fine-tune checkout Unsloth AI and if you changed your mind and want to know more about retrieval augmented generation checkout this blog: https://js.langchain.com/docs/concepts/rag
+source: https://www.ibm.com/think/topics/fine-tuning
 
-(Or just checkout #5 above XD )
+### 6.1) What is Fine-tuning good for?
+
+- Customizing style: Models can be fine-tuned to reflect a brand’s desired tone, from implementing complex behavioral patterns and idiosyncratic illustration styles to simple modifications like beginning each exchange with a polite salutation.
+
+- Specialization: The general linguistic abilities of LLMs can be honed for specific tasks. For example, Meta’s Llama 2 models were released as base foundation models, chatbot-tuned variants (Llama-2-chat) and code-tuned variants (Code Llama). 
+
+- Adding domain-specific knowledge: While LLMs are pre-trained on a massive corpus of data, they are not omniscient. Using additional training samples to supplement the base model’s knowledge is particularly relevant in legal, financial or medical settings, which typically entail use of specialized, esoteric vocabulary that may not have been sufficiently represented in pre-training.
+
+- Few-shot learning: Models that already have strong generalized knowledge can often be fine-tuned for more specific classification texts using comparatively few demonstrative examples. 
+
+- Addressing edge cases: You may want your model to handle certain situations that are unlikely to have been covered in pre-training in a specific way. Fine-tuning a model on labeled examples of such situations is an effective way to ensure they are dealt with appropriately.
+
+- Incorporating proprietary data: Your company may have its own proprietary data pipeline, highly relevant to your specific use case. Fine-tuning allows this knowledge to be incorporated into the model without having to train it from scratch.
+
+source: https://www.ibm.com/think/topics/fine-tuning
+
+### 6.2) Fine-tuning considerations
+
+Before fine-tuning or training an LLM, ask yourself: is it really necessary?
+
+If you have a large dataset organized in a question-answer format, fine-tuning can be effective. However, if your data is unstructured, it’s not worth the time or cost to organize it. Also, if your data is dynamic and constantly changing, fine-tuning isn’t the best approach.
+
+In cases where your data is unstructured or frequently updated, consider using Retrieval-Augmented Generation (RAG) instead. RAG retrieves the most relevant chunks of data based on the query and allows the LLM to generate an answer using that context.
 
 source: [https://github.com/ItzCrazyKns](https://github.com/ItzCrazyKns)
+
+My personal opinion, Customizing style can be accomplished with Prompt Engineering, Specialization and Domain-specific Knowledge can be accomplished with RAG, as well as Incorporating proprietary data. 
+
+I think the biggest reason to Fine-tune is to address edge-case issues and/or to meet specific use-cases, OR if you want to give domain specific knowledge to a really small model where RAG isnt feasible. Such as when you deploy small LLMs to edge devices. 
+
+There are limitations on Prompt Engineering and RAG, and you can over come those with Fine-tuning, but by and large those are easier to implement and will cover most use cases. 
+
+### 6.3) I still want to Fine-tune!
+
+Check out [unsloth](https://unsloth.ai), while I haven't used this service, it is generally the most highly recommended method. Alternatively, check out Huggingface, https://huggingface.co/docs/transformers/en/training.
 
 ## 7) Lastly! I am just a guy on the internet.
 
