@@ -21,14 +21,15 @@ Further Reading
 * [2) What is Quantization?](#2-what-is-quantization)
 * [3) What is Abliteration?](#3-what-is-abliteration)
 * [4) What is Tool Use?](#4-what-is-tool-use)
-* [5) What is Embedding?](#5-what-is-embedding)
-* [6) What is Retrieval Augmented Generation (RAG)?](#6-what-is-retrieval-augmented-generation-rag)
-  + [6.1) So what do we do then?](#61-so-what-do-we-do-then)
-  + [6.2) Check out these resources!](#62-check-out-these-resources)
-* [7) What is Fine-tuning?](#7-what-is-fine-tuning)
-  + [7.1) What is Fine-tuning good for?](#71-what-is-fine-tuning-good-for)
-  + [7.2) Fine-tuning considerations](#72-fine-tuning-considerations)
-* [8) Lastly! I am just a guy on the internet.](#8-lastly-i-am-just-a-guy-on-the-internet)
+* [5) What is Prompt Engineering?](#5-what-is-prompt-engineering)
+* [6) What is Embedding?](#5-what-is-embedding)
+* [7) What is Retrieval Augmented Generation (RAG)?](#6-what-is-retrieval-augmented-generation-rag)
+  + [7.1) So what do we do then?](#61-so-what-do-we-do-then)
+  + [7.2) Check out these resources!](#62-check-out-these-resources)
+* [8) What is Fine-tuning?](#7-what-is-fine-tuning)
+  + [8.1) What is Fine-tuning good for?](#71-what-is-fine-tuning-good-for)
+  + [8.2) Fine-tuning considerations](#72-fine-tuning-considerations)
+* [9) Lastly! I am just a guy on the internet.](#8-lastly-i-am-just-a-guy-on-the-internet)
 
 
 # Ollama Questions
@@ -172,13 +173,48 @@ source: [https://www.deeplearning.ai/the-batch/agentic-design-patterns-part-3-to
 
 TLDR; if you are writing code and you want an LLM to use your functions, that is tool use. 
 
-## 5) What is Embedding?
+## 5) What is Prompt Engineering?
+
+Prompt engineering is the art and science of designing and optimizing prompts to guide AI models, particularly LLMs, towards generating the desired responses. By carefully crafting prompts, you provide the model with context, instructions, and examples that help it understand your intent and respond in a meaningful way. Think of it as providing a roadmap for the AI, steering it towards the specific output you have in mind.
+
+source [https://cloud.google.com/discover/what-is-prompt-engineering](https://cloud.google.com/discover/what-is-prompt-engineering)
+
+You can do a **LOT** with Prompt Engineering. It can be as simple as `You are a helpful assistant` to something like this:
+```
+req_gather = """
+<IDENTITY>You are part of a Project Management Team. Your role is understand the customers request and define the requirements.</IDENTITY>
+<RULES>
+	1) Listen to the customer to find out what they are asking for. 
+	2) Define the overall objective from the customer request.
+    3) Identify the desired endstate.
+    4) Identify the requirements.
+    5) When responding to the customer, always provide the Purpose, Desired Endstate, and Requirements in addition to your response. 
+    6) Ask questions to help the customer flesh out their idea.
+</RULES>
+<GUIDELINES>
+	1) Make suggestions in order to make sure you get enough information.
+	2) If you make a mistake, apologize, and reevaluate what the customer is asking.
+</GUIDELINES>
+<CONVERSATION_HISTORY>
+{chat_history}
+</CONVERSATION_HISTORY>
+<CUSTOMER_REQUEST>
+{query}
+</CUSTOMER_REQUEST>
+"""
+```
+
+The above is currently how I do my system prompts. I find that using the XML like format really helps the LLMs stick to the info I provide. 
+
+In the example above I am using a python string, and before I send it to the LLM i replace `{chat_history}` and `{query}` with the actual values, using the `.format()` function in python. 
+
+## 6) What is Embedding?
 
 In the context of Large Language Models (LLMs), an "embedding" is a numerical representation of a word, phrase, or piece of text that captures its semantic meaning , allowing the LLM to understand the context and relationships between different pieces of information by placing them as vectors in a high-dimensional space where similar concepts are positioned close together; essentially, it's a way to translate language into a format that computers can easily process and reason with
 
 check out this article: [https://medium.com/mongodb/how-to-choose-the-best-embedding-model-for-your-llm-application-2f65fcdfa58d](https://medium.com/mongodb/how-to-choose-the-best-embedding-model-for-your-llm-application-2f65fcdfa58d)
 
-## 6) What is Retrieval Augmented Generation (RAG)
+## 7) What is Retrieval Augmented Generation (RAG)
 
 Retrieval Augmented Generation (RAG) is  an AI technique that enhances the capabilities of a large language model (LLM) by allowing it to access and reference external information sources, like a knowledge base or database, before generating a response, essentially providing more context and accuracy to the generated output by retrieving relevant data specific to a given query or situation.
 
@@ -190,20 +226,20 @@ Second, its going to take longer because there is a lot of data that's not relev
 
 Third, many LLMs will find the first close enough match and respond. What if the comprehensive answer can only be provided when all of the information has been reviewed.
 
-### 6.1) So what do we do then?
+### 7.1) So what do we do then?
 
 Check out the document links below, but the TLDR; is that you will use an LLM like a retriever to find the most relevant / top k results, and provide those to the LLM to answer. (Honestly at a minimum I would suggest this). Then you are more likely to get a comprehensive answer, and its much quicker, and a more efficient use of your resources.
 
 As you dig into the links below you will see that it can get pretty advanced, and you may find that some solutions are not necessary for your use case. Thats fine, better to know what you can do and not need it, than the alternative.
 
-### 6.2) Check out these resources!
+### 7.2) Check out these resources!
 
 - Intro to **RAG**: [https://blog.gopenai.com/**rag**-in-action-enhancing-ai-with-real-time-data-retrieval-9fc216710013](https://blog.gopenai.com/rag-in-action-enhancing-ai-with-real-time-data-retrieval-9fc216710013)
 - Bit more advanced, i wrote this one: [https://medium.com/@sergio1101102/mastering-retrieval-augmented-generation-**rag**-a-practical-guide-for-new-developers-624be24ca516](https://medium.com/@sergio1101102/mastering-retrieval-augmented-generation-rag-a-practical-guide-for-new-developers-624be24ca516 "https://medium.com/@sergio1101102/mastering-retrieval-augmented-generation-rag-a-practical-guide-for-new-developers-624be24ca516")
 - A simple **RAG** tool that uses ollama, you can copy the code for what you need: [https://github.com/maglore9900/chat_with_docs](https://github.com/maglore9900/chat_with_docs "https://github.com/maglore9900/chat_with_docs")
 - Bit even more advanced, where I wrote about my own experience with a specific use case: [https://medium.com/@sergio1101102/mastering-**rag**-a-practical-guide-for-new-developers-part-2-786858742e91](https://medium.com/@sergio1101102/mastering-rag-a-practical-guide-for-new-developers-part-2-786858742e91 "https://medium.com/@sergio1101102/mastering-rag-a-practical-guide-for-new-developers-part-2-786858742e91")
 
-## 7) What is Fine-tuning?
+## 8) What is Fine-tuning?
 
 Fine-tuning in machine learning is the process of adapting a pre-trained model for specific tasks or use cases. It has become a fundamental deep learning technique, particularly in the training process of foundation models used for generative AI.
 
@@ -211,7 +247,7 @@ Fine-tuning could be considered a subset of the broader technique of transfer le
 
 source: https://www.ibm.com/think/topics/fine-tuning
 
-### 7.1) What is Fine-tuning good for?
+### 8.1) What is Fine-tuning good for?
 
 - Customizing style: Models can be fine-tuned to reflect a brand’s desired tone, from implementing complex behavioral patterns and idiosyncratic illustration styles to simple modifications like beginning each exchange with a polite salutation.
 
@@ -227,7 +263,7 @@ source: https://www.ibm.com/think/topics/fine-tuning
 
 source: https://www.ibm.com/think/topics/fine-tuning
 
-### 7.2) Fine-tuning considerations
+### 8.2) Fine-tuning considerations
 
 Before fine-tuning or training an LLM, ask yourself: is it really necessary?
 
@@ -243,11 +279,11 @@ I think the biggest reason to Fine-tune is to address edge-case issues and/or to
 
 There are limitations on Prompt Engineering and RAG, and you can over come those with Fine-tuning, but by and large those are easier to implement and will cover most use cases. 
 
-### 7.3) I still want to Fine-tune!
+### 8.3) I still want to Fine-tune!
 
 Check out [unsloth](https://unsloth.ai), while I haven't used this service, it is generally the most highly recommended method. Alternatively, check out Huggingface, https://huggingface.co/docs/transformers/en/training.
 
-## 8) Lastly! I am just a guy on the internet.
+## 9) Lastly! I am just a guy on the internet.
 
 I am not on the Ollama team, I am not a representative of an org. I'm just a guy that likes the community, likes the product, and tries to help people. So if you are offended by anything above, well, I'm sorry for you.
 
