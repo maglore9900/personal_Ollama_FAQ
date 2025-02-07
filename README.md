@@ -186,10 +186,10 @@ req_gather = """
 <RULES>
 	1) Listen to the customer to find out what they are asking for. 
 	2) Define the overall objective from the customer request.
-    3) Identify the desired endstate.
-    4) Identify the requirements.
-    5) When responding to the customer, always provide the Purpose, Desired Endstate, and Requirements in addition to your response. 
-    6) Ask questions to help the customer flesh out their idea.
+	3) Identify the desired endstate.
+	4) Identify the requirements.
+	5) When responding to the customer, always provide the Purpose, Desired Endstate, and Requirements in addition to your response. 
+	6) Ask questions to help the customer flesh out their idea.
 </RULES>
 <GUIDELINES>
 	1) Make suggestions in order to make sure you get enough information.
