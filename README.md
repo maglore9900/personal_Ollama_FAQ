@@ -17,17 +17,18 @@ Ollama Questions
 * [6) Ok, I have a question, and none of the previous resources answer it](#9-ok-i-have-a-question-and-none-of-the-previous-resources-answer-it)
 
 Further Reading
-*  [1) What are Parameters?](#6-what-are-parameters)
-* [2) What is Quantization?](#7-what-is-quantization)
-* [3) What is Abliteration?](#8-what-is-abliteration)
-* [4) What is Embedding?](#10-what-is-embedding)
-* [5) What is Retrieval Augmented Generation (RAG)?](#5-what-is-retrieval-augmented-generation-rag)
-  + [5.1) So what do we do then?](#51-so-what-do-we-do-then)
-  + [5.2) Check out these resources!](#52-check-out-these-resources)
-* [6) What is Fine-tuning?](#6-what-is-fine-tuning)
-  + [6.1) What is Fine-tuning good for?](#61-what-is-fine-tuning-good-for)
-  + [6.2) Fine-tuning considerations](#62-fine-tuning-considerations)
-* [7) Lastly! I am just a guy on the internet.](#12-lastly-i-am-just-a-guy-on-the-internet)
+* [1) What are Parameters?](#1-what-are-parameters)
+* [2) What is Quantization?](#2-what-is-quantization)
+* [3) What is Abliteration?](#3-what-is-abliteration)
+* [4) What is Tool Use?](#4-what-is-tool-use)
+* [5) What is Embedding?](#5-what-is-embedding)
+* [6) What is Retrieval Augmented Generation (RAG)?](#6-what-is-retrieval-augmented-generation-rag)
+  + [6.1) So what do we do then?](#61-so-what-do-we-do-then)
+  + [6.2) Check out these resources!](#62-check-out-these-resources)
+* [7) What is Fine-tuning?](#7-what-is-fine-tuning)
+  + [7.1) What is Fine-tuning good for?](#71-what-is-fine-tuning-good-for)
+  + [7.2) Fine-tuning considerations](#72-fine-tuning-considerations)
+* [8) Lastly! I am just a guy on the internet.](#8-lastly-i-am-just-a-guy-on-the-internet)
 
 
 # Ollama Questions
@@ -163,13 +164,21 @@ Conversely, adding this direction artificially can cause the model to refuse eve
 
 source: [https://huggingface.co/blog/mlabonne/abliteration](https://huggingface.co/blog/mlabonne/abliteration)
 
-## 4) What is Embedding?
+## 4) What is Tool Use?
+
+Tool Use, in which an LLM is given functions it can request to call for gathering information, taking action, or manipulating data, is a key design pattern of AI agentic workflows. You may be familiar with LLM-based systems that can perform a web search or execute code.
+
+source: [https://www.deeplearning.ai/the-batch/agentic-design-patterns-part-3-tool-use/](https://www.deeplearning.ai/the-batch/agentic-design-patterns-part-3-tool-use/)
+
+TLDR; if you are writing code and you want an LLM to use your functions, that is tool use. 
+
+## 5) What is Embedding?
 
 In the context of Large Language Models (LLMs), an "embedding" is a numerical representation of a word, phrase, or piece of text that captures its semantic meaning , allowing the LLM to understand the context and relationships between different pieces of information by placing them as vectors in a high-dimensional space where similar concepts are positioned close together; essentially, it's a way to translate language into a format that computers can easily process and reason with
 
 check out this article: [https://medium.com/mongodb/how-to-choose-the-best-embedding-model-for-your-llm-application-2f65fcdfa58d](https://medium.com/mongodb/how-to-choose-the-best-embedding-model-for-your-llm-application-2f65fcdfa58d)
 
-## 5) What is Retrieval Augmented Generation (RAG)
+## 6) What is Retrieval Augmented Generation (RAG)
 
 Retrieval Augmented Generation (RAG) is  an AI technique that enhances the capabilities of a large language model (LLM) by allowing it to access and reference external information sources, like a knowledge base or database, before generating a response, essentially providing more context and accuracy to the generated output by retrieving relevant data specific to a given query or situation.
 
@@ -181,20 +190,20 @@ Second, its going to take longer because there is a lot of data that's not relev
 
 Third, many LLMs will find the first close enough match and respond. What if the comprehensive answer can only be provided when all of the information has been reviewed.
 
-### 5.1) So what do we do then?
+### 6.1) So what do we do then?
 
 Check out the document links below, but the TLDR; is that you will use an LLM like a retriever to find the most relevant / top k results, and provide those to the LLM to answer. (Honestly at a minimum I would suggest this). Then you are more likely to get a comprehensive answer, and its much quicker, and a more efficient use of your resources.
 
 As you dig into the links below you will see that it can get pretty advanced, and you may find that some solutions are not necessary for your use case. Thats fine, better to know what you can do and not need it, than the alternative.
 
-### 5.2) Check out these resources!
+### 6.2) Check out these resources!
 
 - Intro to **RAG**: [https://blog.gopenai.com/**rag**-in-action-enhancing-ai-with-real-time-data-retrieval-9fc216710013](https://blog.gopenai.com/rag-in-action-enhancing-ai-with-real-time-data-retrieval-9fc216710013)
 - Bit more advanced, i wrote this one: [https://medium.com/@sergio1101102/mastering-retrieval-augmented-generation-**rag**-a-practical-guide-for-new-developers-624be24ca516](https://medium.com/@sergio1101102/mastering-retrieval-augmented-generation-rag-a-practical-guide-for-new-developers-624be24ca516 "https://medium.com/@sergio1101102/mastering-retrieval-augmented-generation-rag-a-practical-guide-for-new-developers-624be24ca516")
 - A simple **RAG** tool that uses ollama, you can copy the code for what you need: [https://github.com/maglore9900/chat_with_docs](https://github.com/maglore9900/chat_with_docs "https://github.com/maglore9900/chat_with_docs")
 - Bit even more advanced, where I wrote about my own experience with a specific use case: [https://medium.com/@sergio1101102/mastering-**rag**-a-practical-guide-for-new-developers-part-2-786858742e91](https://medium.com/@sergio1101102/mastering-rag-a-practical-guide-for-new-developers-part-2-786858742e91 "https://medium.com/@sergio1101102/mastering-rag-a-practical-guide-for-new-developers-part-2-786858742e91")
 
-## 6) What is Fine-tuning?
+## 7) What is Fine-tuning?
 
 Fine-tuning in machine learning is the process of adapting a pre-trained model for specific tasks or use cases. It has become a fundamental deep learning technique, particularly in the training process of foundation models used for generative AI.
 
@@ -202,7 +211,7 @@ Fine-tuning could be considered a subset of the broader technique of transfer le
 
 source: https://www.ibm.com/think/topics/fine-tuning
 
-### 6.1) What is Fine-tuning good for?
+### 7.1) What is Fine-tuning good for?
 
 - Customizing style: Models can be fine-tuned to reflect a brand’s desired tone, from implementing complex behavioral patterns and idiosyncratic illustration styles to simple modifications like beginning each exchange with a polite salutation.
 
@@ -218,7 +227,7 @@ source: https://www.ibm.com/think/topics/fine-tuning
 
 source: https://www.ibm.com/think/topics/fine-tuning
 
-### 6.2) Fine-tuning considerations
+### 7.2) Fine-tuning considerations
 
 Before fine-tuning or training an LLM, ask yourself: is it really necessary?
 
@@ -234,11 +243,11 @@ I think the biggest reason to Fine-tune is to address edge-case issues and/or to
 
 There are limitations on Prompt Engineering and RAG, and you can over come those with Fine-tuning, but by and large those are easier to implement and will cover most use cases. 
 
-### 6.3) I still want to Fine-tune!
+### 7.3) I still want to Fine-tune!
 
 Check out [unsloth](https://unsloth.ai), while I haven't used this service, it is generally the most highly recommended method. Alternatively, check out Huggingface, https://huggingface.co/docs/transformers/en/training.
 
-## 7) Lastly! I am just a guy on the internet.
+## 8) Lastly! I am just a guy on the internet.
 
 I am not on the Ollama team, I am not a representative of an org. I'm just a guy that likes the community, likes the product, and tries to help people. So if you are offended by anything above, well, I'm sorry for you.
 
