@@ -23,13 +23,13 @@ Further Reading
 * [4) What is Tool Use?](#4-what-is-tool-use)
 * [5) What is Prompt Engineering?](#5-what-is-prompt-engineering)
 * [6) What is Embedding?](#5-what-is-embedding)
-* [7) What is Retrieval Augmented Generation (RAG)?](#6-what-is-retrieval-augmented-generation-rag)
-  + [7.1) So what do we do then?](#61-so-what-do-we-do-then)
-  + [7.2) Check out these resources!](#62-check-out-these-resources)
-* [8) What is Fine-tuning?](#7-what-is-fine-tuning)
-  + [8.1) What is Fine-tuning good for?](#71-what-is-fine-tuning-good-for)
-  + [8.2) Fine-tuning considerations](#72-fine-tuning-considerations)
-* [9) Lastly! I am just a guy on the internet.](#8-lastly-i-am-just-a-guy-on-the-internet)
+* [7) What is Retrieval Augmented Generation (RAG)?](#7-what-is-retrieval-augmented-generation-rag)
+  + [7.1) So what do we do then?](#71-so-what-do-we-do-then)
+  + [7.2) Check out these resources!](#72-check-out-these-resources)
+* [8) What is Fine-tuning?](#8-what-is-fine-tuning)
+  + [8.1) What is Fine-tuning good for?](#81-what-is-fine-tuning-good-for)
+  + [8.2) Fine-tuning considerations](#82-fine-tuning-considerations)
+* [9) Lastly! I am just a guy on the internet.](#9-lastly-i-am-just-a-guy-on-the-internet)
 
 
 # Ollama Questions
