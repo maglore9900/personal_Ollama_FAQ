@@ -161,8 +161,9 @@ file: [quantization_type.xlsx](quantization_type.xlsx)
 
 I am just starting to mess around with this myself, but so far I know of two good methods.
 
-	1) You can use Ollama to do the quantization, info is here: [https://github.com/ollama/ollama/blob/main/docs/modelfile.md](https://github.com/ollama/ollama/blob/main/docs/modelfile.md)
-	2) You can use a service on Huggingface for free, here: [https://huggingface.co/spaces/ggml-org/gguf-my-repo](https://huggingface.co/spaces/ggml-org/gguf-my-repo)
+  1) You can use Ollama to do the quantization, info is here: [https://github.com/ollama/ollama/blob/main/docs/modelfile.md](https://github.com/ollama/ollama/blob/main/docs/modelfile.md)
+  2) You can use a service on Huggingface for free, here: [https://huggingface.co/spaces/ggml-org/gguf-my-repo](https://huggingface.co/spaces/ggml-org/gguf-my-repo)
+  
 > Note, you will need to sign up for a free account for that to work. Also, you can import models from Huggingface directly through Ollama using the `ollama pull hf.co/<user>/<model>`, see this: [https://huggingface.co/docs/hub/en/ollama](https://huggingface.co/docs/hub/en/ollama)
 
 
