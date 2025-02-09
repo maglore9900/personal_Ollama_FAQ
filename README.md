@@ -34,7 +34,7 @@ Further Reading
 * [9) Lastly! I am just a guy on the internet.](#9-lastly-i-am-just-a-guy-on-the-internet)
 
 
-# Ollama Questions
+# Ollama Questions 
 
 ## 1) I have a question
 
