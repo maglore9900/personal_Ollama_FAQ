@@ -19,6 +19,8 @@ Ollama Questions
 Further Reading
 * [1) What are Parameters?](#1-what-are-parameters)
 * [2) What is Quantization?](#2-what-is-quantization)
+  + [2.1) How does Quantization impact LLMs?](#21-how-does-quantization-impact-llms)
+  + [2.2) How can I Quantizize a model to fit my GPU/System?](#22-how-can-i-quantizize-a-model-to-fit-my-gpusystem)
 * [3) What is Abliteration?](#3-what-is-abliteration)
 * [4) What is Tool Use?](#4-what-is-tool-use)
 * [5) What is Prompt Engineering?](#5-what-is-prompt-engineering)
