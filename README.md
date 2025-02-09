@@ -149,9 +149,23 @@ This process makes LLMs more efficient and accessible by reducing their size.
 
 This also makes them less accurate. Generally Q4 and up are fine. Anything smaller can be a little crazy. **Mileage May Vary.**
 
+### 2.1) How does Quantization impact LLMs?
+
+See below on how Quantization affects LLMs, and what you might want to consider.
+
 ![](images/quant.png)
 
 file: [quantization_type.xlsx](quantization_type.xlsx)
+
+### 2.2) How can I Quantizize a model to fit my GPU/System?
+
+I am just starting to mess around with this myself, but so far I know of two good methods.
+
+	1) You can use Ollama to do the quantization, info is here: [https://github.com/ollama/ollama/blob/main/docs/modelfile.md](https://github.com/ollama/ollama/blob/main/docs/modelfile.md)
+	2) You can use a service on Huggingface for free, here: [https://huggingface.co/spaces/ggml-org/gguf-my-repo](https://huggingface.co/spaces/ggml-org/gguf-my-repo)
+> Note, you will need to sign up for a free account for that to work
+> You can import models from Huggingface directly through Ollama using the `ollama pull hf.co/<user>/<model>`, see this: [https://huggingface.co/docs/hub/en/ollama](https://huggingface.co/docs/hub/en/ollama)
+
 
 ## 3) What is Abliteration?
 
