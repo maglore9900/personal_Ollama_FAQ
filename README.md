@@ -224,6 +224,8 @@ The above is currently how I do my system prompts. I find that using the XML lik
 
 In the example above I am using a python string, and before I send it to the LLM i replace `{chat_history}` and `{query}` with the actual values, using the `.format()` function in python. 
 
+Further reading: [https://github.com/varungodbole/prompt-tuning-playbook](https://github.com/varungodbole/prompt-tuning-playbook)
+
 ## 6) What is Embedding?
 
 In the context of Large Language Models (LLMs), an "embedding" is a numerical representation of a word, phrase, or piece of text that captures its semantic meaning , allowing the LLM to understand the context and relationships between different pieces of information by placing them as vectors in a high-dimensional space where similar concepts are positioned close together; essentially, it's a way to translate language into a format that computers can easily process and reason with
