@@ -14,7 +14,7 @@ Ollama Questions
   + [3.4) But wait, I have a mac, and it has Unified Memory!](#34-but-wait-i-have-a-mac-and-it-has-unified-memory)
 * [4) Ollama is not using all my resources OR GPU is not being used but my CPU is at 100%](#4-ollama-is-not-using-all-my-resources-or-gpu-is-not-being-used-but-my-cpu-is-at-100)
 * [5) I am using OpenWeb UI and ...](#5-i-am-using-openweb-ui-and)
-* [6) Ollama Env Variables?(#6-ollama-env-variables)
+* [6) Ollama Env Variables?](#6-ollama-env-variables)
 * [7) Ok, I have a question, and none of the previous resources answer it](#7-ok-i-have-a-question-and-none-of-the-previous-resources-answer-it)
 
 Further Reading
