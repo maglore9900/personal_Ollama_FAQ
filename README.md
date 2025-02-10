@@ -14,7 +14,8 @@ Ollama Questions
   + [3.4) But wait, I have a mac, and it has Unified Memory!](#34-but-wait-i-have-a-mac-and-it-has-unified-memory)
 * [4) Ollama is not using all my resources OR GPU is not being used but my CPU is at 100%](#4-ollama-is-not-using-all-my-resources-or-gpu-is-not-being-used-but-my-cpu-is-at-100)
 * [5) I am using OpenWeb UI and ...](#5-i-am-using-openweb-ui-and)
-* [6) Ok, I have a question, and none of the previous resources answer it](#9-ok-i-have-a-question-and-none-of-the-previous-resources-answer-it)
+* [6) Ollama Env Variables?(#6-ollama-env-variables)
+* [7) Ok, I have a question, and none of the previous resources answer it](#7-ok-i-have-a-question-and-none-of-the-previous-resources-answer-it)
 
 Further Reading
 * [1) What are Parameters?](#1-what-are-parameters)
@@ -117,7 +118,28 @@ Is it an Ollama question? does the issue happen when using Ollama by itself? If 
 
 Otherwise, go ask in the OpenWeb UI discord. They will know how to answer OpenWeb UI questions.
 
-## 6) Ok, I have a question, and none of the previous resources answer it
+## 6) Ollama Env Variables?
+
+```
+Environment Variables:
+      OLLAMA_DEBUG               Show additional debug information (e.g. OLLAMA_DEBUG=1)
+      OLLAMA_HOST                IP Address for the ollama server (default 127.0.0.1:11434)
+      OLLAMA_KEEP_ALIVE          The duration that models stay loaded in memory (default "5m")
+      OLLAMA_MAX_LOADED_MODELS   Maximum number of loaded models per GPU
+      OLLAMA_MAX_QUEUE           Maximum number of queued requests
+      OLLAMA_MODELS              The path to the models directory
+      OLLAMA_NUM_PARALLEL        Maximum number of parallel requests
+      OLLAMA_NOPRUNE             Do not prune model blobs on startup
+      OLLAMA_ORIGINS             A comma separated list of allowed origins
+      OLLAMA_SCHED_SPREAD        Always schedule model across all GPUs                           
+      OLLAMA_FLASH_ATTENTION     Enabled flash attention
+      OLLAMA_KV_CACHE_TYPE       Quantization type for the K/V cache (default: f16)
+      OLLAMA_LLM_LIBRARY         Set LLM library to bypass autodetection
+      OLLAMA_GPU_OVERHEAD        Reserve a portion of VRAM per GPU (bytes)
+      OLLAMA_LOAD_TIMEOUT        How long to allow model loads to stall before giving up (default "5m")
+```
+
+## 7) Ok, I have a question, and none of the previous resources answer it
 
 Great, ok, you are more than welcome to ask it in the Ollama discord general chat or open a ticket in the Help channel. But first, ask yourself a few questions:
 
