@@ -120,6 +120,7 @@ Otherwise, go ask in the OpenWeb UI discord. They will know how to answer OpenWe
 
 ## 6) Ollama Env Variables?
 
+From Windows: (Linux has a few more)
 ```
 Environment Variables:
       OLLAMA_DEBUG               Show additional debug information (e.g. OLLAMA_DEBUG=1)
@@ -280,7 +281,8 @@ As you dig into the links below you will see that it can get pretty advanced, an
 - Bit even more advanced, where I wrote about my own experience with a specific use case: [https://medium.com/@sergio1101102/mastering-**rag**-a-practical-guide-for-new-developers-part-2-786858742e91](https://medium.com/@sergio1101102/mastering-rag-a-practical-guide-for-new-developers-part-2-786858742e91 "https://medium.com/@sergio1101102/mastering-rag-a-practical-guide-for-new-developers-part-2-786858742e91")
 - How to evaluate your RAG solution:
 [https://cloud.google.com/blog/products/ai-machine-learning/optimizing-rag-retrieval/](https://cloud.google.com/blog/products/ai-machine-learning/optimizing-rag-retrieval/)
-
+- How to Build a Local RAG Using DeepSeek-R1, LangChain, and Ollama:
+[https://blog.gopenai.com/how-to-build-a-privacy-first-rag-using-deepseek-r1-langchain-and-ollama-c5133a8514dd](https://blog.gopenai.com/how-to-build-a-privacy-first-rag-using-deepseek-r1-langchain-and-ollama-c5133a8514dd)
 ## 8) What is Fine-tuning?
 
 Fine-tuning in machine learning is the process of adapting a pre-trained model for specific tasks or use cases. It has become a fundamental deep learning technique, particularly in the training process of foundation models used for generative AI.
