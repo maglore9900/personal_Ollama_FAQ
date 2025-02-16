@@ -14,7 +14,8 @@ Ollama Questions
   + [3.4) But wait, I have a mac, and it has Unified Memory!](#34-but-wait-i-have-a-mac-and-it-has-unified-memory)
 * [4) Ollama is not using all my resources OR GPU is not being used but my CPU is at 100%](#4-ollama-is-not-using-all-my-resources-or-gpu-is-not-being-used-but-my-cpu-is-at-100)
 * [5) I am using OpenWeb UI and ...](#5-i-am-using-openweb-ui-and)
-* [6) Ok, I have a question, and none of the previous resources answer it](#9-ok-i-have-a-question-and-none-of-the-previous-resources-answer-it)
+* [6) Ollama Env Variables?](#6-ollama-env-variables)
+* [7) Ok, I have a question, and none of the previous resources answer it](#7-ok-i-have-a-question-and-none-of-the-previous-resources-answer-it)
 
 Further Reading
 * [1) What are Parameters?](#1-what-are-parameters)
@@ -117,7 +118,29 @@ Is it an Ollama question? does the issue happen when using Ollama by itself? If 
 
 Otherwise, go ask in the OpenWeb UI discord. They will know how to answer OpenWeb UI questions.
 
-## 6) Ok, I have a question, and none of the previous resources answer it
+## 6) Ollama Env Variables?
+
+From Windows: (Linux has a few more)
+```
+Environment Variables:
+      OLLAMA_DEBUG               Show additional debug information (e.g. OLLAMA_DEBUG=1)
+      OLLAMA_HOST                IP Address for the ollama server (default 127.0.0.1:11434)
+      OLLAMA_KEEP_ALIVE          The duration that models stay loaded in memory (default "5m")
+      OLLAMA_MAX_LOADED_MODELS   Maximum number of loaded models per GPU
+      OLLAMA_MAX_QUEUE           Maximum number of queued requests
+      OLLAMA_MODELS              The path to the models directory
+      OLLAMA_NUM_PARALLEL        Maximum number of parallel requests
+      OLLAMA_NOPRUNE             Do not prune model blobs on startup
+      OLLAMA_ORIGINS             A comma separated list of allowed origins
+      OLLAMA_SCHED_SPREAD        Always schedule model across all GPUs                           
+      OLLAMA_FLASH_ATTENTION     Enabled flash attention
+      OLLAMA_KV_CACHE_TYPE       Quantization type for the K/V cache (default: f16)
+      OLLAMA_LLM_LIBRARY         Set LLM library to bypass autodetection
+      OLLAMA_GPU_OVERHEAD        Reserve a portion of VRAM per GPU (bytes)
+      OLLAMA_LOAD_TIMEOUT        How long to allow model loads to stall before giving up (default "5m")
+```
+
+## 7) Ok, I have a question, and none of the previous resources answer it
 
 Great, ok, you are more than welcome to ask it in the Ollama discord general chat or open a ticket in the Help channel. But first, ask yourself a few questions:
 
@@ -224,6 +247,8 @@ The above is currently how I do my system prompts. I find that using the XML lik
 
 In the example above I am using a python string, and before I send it to the LLM i replace `{chat_history}` and `{query}` with the actual values, using the `.format()` function in python. 
 
+Further reading: [https://github.com/varungodbole/prompt-tuning-playbook](https://github.com/varungodbole/prompt-tuning-playbook)
+
 ## 6) What is Embedding?
 
 In the context of Large Language Models (LLMs), an "embedding" is a numerical representation of a word, phrase, or piece of text that captures its semantic meaning , allowing the LLM to understand the context and relationships between different pieces of information by placing them as vectors in a high-dimensional space where similar concepts are positioned close together; essentially, it's a way to translate language into a format that computers can easily process and reason with
@@ -254,7 +279,10 @@ As you dig into the links below you will see that it can get pretty advanced, an
 - Bit more advanced, i wrote this one: [https://medium.com/@sergio1101102/mastering-retrieval-augmented-generation-**rag**-a-practical-guide-for-new-developers-624be24ca516](https://medium.com/@sergio1101102/mastering-retrieval-augmented-generation-rag-a-practical-guide-for-new-developers-624be24ca516 "https://medium.com/@sergio1101102/mastering-retrieval-augmented-generation-rag-a-practical-guide-for-new-developers-624be24ca516")
 - A simple **RAG** tool that uses ollama, you can copy the code for what you need: [https://github.com/maglore9900/chat_with_docs](https://github.com/maglore9900/chat_with_docs "https://github.com/maglore9900/chat_with_docs")
 - Bit even more advanced, where I wrote about my own experience with a specific use case: [https://medium.com/@sergio1101102/mastering-**rag**-a-practical-guide-for-new-developers-part-2-786858742e91](https://medium.com/@sergio1101102/mastering-rag-a-practical-guide-for-new-developers-part-2-786858742e91 "https://medium.com/@sergio1101102/mastering-rag-a-practical-guide-for-new-developers-part-2-786858742e91")
-
+- How to evaluate your RAG solution:
+[https://cloud.google.com/blog/products/ai-machine-learning/optimizing-rag-retrieval/](https://cloud.google.com/blog/products/ai-machine-learning/optimizing-rag-retrieval/)
+- How to Build a Local RAG Using DeepSeek-R1, LangChain, and Ollama:
+[https://blog.gopenai.com/how-to-build-a-privacy-first-rag-using-deepseek-r1-langchain-and-ollama-c5133a8514dd](https://blog.gopenai.com/how-to-build-a-privacy-first-rag-using-deepseek-r1-langchain-and-ollama-c5133a8514dd)
 ## 8) What is Fine-tuning?
 
 Fine-tuning in machine learning is the process of adapting a pre-trained model for specific tasks or use cases. It has become a fundamental deep learning technique, particularly in the training process of foundation models used for generative AI.
