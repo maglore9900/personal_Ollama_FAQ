@@ -279,6 +279,8 @@ source: https://www.ibm.com/think/topics/fine-tuning
 
 source: https://www.ibm.com/think/topics/fine-tuning
 
+Another good article: [https://blog.promptlayer.com/why-fine-tuning-is-probably-not-for-you/](https://blog.promptlayer.com/why-fine-tuning-is-probably-not-for-you/)
+
 ### 8.2) Fine-tuning considerations
 
 Before fine-tuning or training an LLM, ask yourself: is it really necessary?
