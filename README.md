@@ -181,6 +181,7 @@ This also makes them less accurate. Generally Q4 and up are fine. Anything small
 See below on how Quantization affects LLMs, and what you might want to consider.
 
 ![](images/quant.png)
+
 image provided by Socialnetwooky-abliterated:3b aka socialnetwooky
 
 file: [quantization_type.xlsx](quantization_type.xlsx)
