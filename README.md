@@ -15,7 +15,8 @@ Ollama Questions
 * [4) Ollama is not using all my resources OR GPU is not being used but my CPU is at 100%](#4-ollama-is-not-using-all-my-resources-or-gpu-is-not-being-used-but-my-cpu-is-at-100)
 * [5) I am using OpenWeb UI and ...](#5-i-am-using-openweb-ui-and)
 * [6) Ollama Env Variables?](#6-ollama-env-variables)
-* [7) Ok, I have a question, and none of the previous resources answer it](#7-ok-i-have-a-question-and-none-of-the-previous-resources-answer-it)
+* [7) Deciphering Ollama model names](#7-deciphering-ollama-model-names)
+* [8) Ok, I have a question, and none of the previous resources answer it](#8-ok-i-have-a-question-and-none-of-the-previous-resources-answer-it)
 
 Further Reading
 * [1) What are Parameters?](#1-what-are-parameters)
@@ -140,7 +141,11 @@ Environment Variables:
       OLLAMA_LOAD_TIMEOUT        How long to allow model loads to stall before giving up (default "5m")
 ```
 
-## 7) Ok, I have a question, and none of the previous resources answer it
+## 7) Deciphering Ollama model names
+
+Great write up by the Epic Dev here: https://theepic.dev/kb/deciphering-ollama-model-names/
+
+## 8) Ok, I have a question, and none of the previous resources answer it
 
 Great, ok, you are more than welcome to ask it in the Ollama discord general chat or open a ticket in the Help channel. But first, ask yourself a few questions:
 
