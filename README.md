@@ -174,6 +174,8 @@ This process makes LLMs more efficient and accessible by reducing their size.
 
 This also makes them less accurate. Generally Q4 and up are fine. Anything smaller can be a little crazy. **Mileage May Vary.**
 
+![](images/quants_small.png)
+
 ### 2.1) How does Quantization impact LLMs?
 
 See below on how Quantization affects LLMs, and what you might want to consider.
