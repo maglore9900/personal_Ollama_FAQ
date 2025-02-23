@@ -223,6 +223,10 @@ TLDR; if you are writing code and you want an LLM to use your functions, that is
 
 ## 5) What is Prompt Engineering?
 
+Here is a great 20min intro video that covers Google's prompt Engineering course. Trust me, this is a GREAT intro to Prompt Engineering.
+
+https://www.youtube.com/watch?v=p09yRj47kNM
+
 Prompt engineering is the art and science of designing and optimizing prompts to guide AI models, particularly LLMs, towards generating the desired responses. By carefully crafting prompts, you provide the model with context, instructions, and examples that help it understand your intent and respond in a meaningful way. Think of it as providing a roadmap for the AI, steering it towards the specific output you have in mind.
 
 source [https://cloud.google.com/discover/what-is-prompt-engineering](https://cloud.google.com/discover/what-is-prompt-engineering)
